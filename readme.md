@@ -42,23 +42,23 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 
 ## Features
 
-* **Lightweight**: All features are written in vanilla JavaScript and run server-side via the `gulp` task. The only JavaScript that runs client-side is jquery-smooth-scroll and prism.js (see below for more details).
+* **Lightweight**: All features are written in vanilla JavaScript and run server-side via the `gulp` task. The only JavaScript that runs client-side is jquery-smooth-scroll (see below for more details).
 * **Efficient**: Only the documentation files that have been modified are run through the task. Courtesy of [gulp-changed][gulp-changed].
 * **Table of Contents**: Manually trying to maintain TOCs is a headache. This is why Documentastic uses [gulp-doctoc][gulp-doctoc] to automatically generate a dynamic TOC for you based on the structure of your document's headings.
-* **Easy to Read, Easy to Write**: Reading and writing in Markdown couldn't be simpler... as long as you're at a computer. If you're on a mobile device, why should you download yet _another_ app just to read Markdown files? Documentastic uses [gulp-marked][gulp-marked] to take your Markdown files and create platform-agnostic HTML documents from them so that they can be read in any browser.
-* **Function or Form - Why Not Both?**: For best browser compatibility and to avoid nasty surprises, HTML documents should be well-formed and comply with the W3C specification.
+* **Easy to read, easy to write**: Reading and writing in Markdown couldn't be simpler... as long as you're at a computer. If you're on a mobile device, why should you download yet _another_ app just to read Markdown files? Documentastic uses [gulp-marked][gulp-marked] to take your Markdown files and create platform-agnostic HTML documents from them so that they can be read in any browser.
+* **Function or form - why not both?**: For best browser compatibility and to avoid nasty surprises, HTML documents should be well-formed and comply with the W3C specification.
 	* Documentastic keeps your working Markdown file clean _and_ your compiled HTML document compliant by using [gulp-inject][gulp-inject] to inject HTML code partials containing the required `<doctype>`, `<html>`, `<head>`, and `<body>` elements.
 	* If you want to review the compiled HTML document's code directly, [gulp-prettify][gulp-prettify] has got you covered with proper line breaks and indentation.
-* **DOM Manipulation**: Documentastic uses [gulp-dom][gulp-dom] to:
+* **DOM manipulation**: Documentastic uses [gulp-dom][gulp-dom] to:
 	* Set a `title` for all documents;
 	* Set attributes on external links; and
 	* Convert Markdown checkboxes into HTML `<input type="checkbox">` elements.
-* **Platform-Agnostic**: Free yourself from the chains of platform dependency and vendor lock-in. As long as you have a browser, you can read your documents.
+* **Platform-agnostic**: Free yourself from the chains of platform dependency and vendor lock-in. As long as you have a browser, you can read your documents.
 * **Responsive**: Documents are responsive and will scale gracefully according to device screen size.
 * **Stylin'**: CSS styling courtesy of the [GitHub Markdown Stylesheet][gh-md-ss].
-* **Smooth Moves**: Smooth-scrolling is added to all internal links (i.e. everything in the document's TOC) courtesy of [jquery-smooth-scroll][jq-ss].
-* **Syntax Highlighting**: Code syntax highlighting courtesy of [prism.js][prism].
-* **Printer-Friendly**: Documents are printer-friendly by default.
+* **Syntax highlighting**: Server-side code syntax highlighting courtesy of [prism.js][prism].
+* **Smooth moves**: Smooth-scrolling is added to all internal links (i.e. everything in the document's TOC) courtesy of [jquery-smooth-scroll][jq-ss].
+* **Printer-friendly**: Documents are printer-friendly by default.
 
 ## License
 
