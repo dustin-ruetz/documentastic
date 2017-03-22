@@ -1,11 +1,10 @@
 /* GitHub Markdown Stylesheet */
 /* https://gist.github.com/tuzz/3331384 */
-/* Downloaded 2016-Jul-28 */
 /* Search "mod" to find modifications */
 
 body {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px; 
+	font-size: 14px;
 	font-size: 16px; /* mod: adjusted font-size */
 	line-height: 1.6;
 	padding-top: 10px;
@@ -13,7 +12,7 @@ body {
 	background-color: white;
 	padding: 30px;
 	color: #333;
-	max-width: 500px; /* mod: added max-width */
+	max-width: 800px; /* mod: added max-width */
 	margin: 0 auto; /* mod: added margin */
 }
 
@@ -26,12 +25,12 @@ body > *:last-child {
 }
 
 a {
-	color: #4183C4;
+	color: #4183c4;
 	text-decoration: none;
 }
 
 a.absent {
-	color: #cc0000;
+	color: #c00;
 }
 
 a.anchor {
@@ -95,9 +94,9 @@ h1 {
 
 h2 {
 	font-size: 24px;
-	font-size: 30px; /* mod: adjusted font-size */
-	border-bottom: 1px solid #cccccc;
-	border-bottom: 3px solid #cccccc; /* mod: adjusted border-bottom */
+	font-size: 32px; /* mod: adjusted font-size */
+	border-bottom: 1px solid #ccc;
+	border-bottom: 3px solid #ccc; /* mod: adjusted border-bottom */
 	color: black;
 }
 
@@ -110,18 +109,18 @@ h3 {
 
 h4 {
 	font-size: 16px;
-	font-size: 22px; /* mod: adjusted font-size */
+	font-size: 24px; /* mod: adjusted font-size */
 }
 
 h5 {
 	font-size: 14px;
-	font-size: 18px; /* mod: adjusted font-size */
+	font-size: 22px; /* mod: adjusted font-size */
 }
 
 h6 {
-	color: #777777;
+	color: #777;
 	font-size: 14px;
-	font-size: 18px; /* mod: adjusted font-size */
+	font-size: 20px; /* mod: adjusted font-size */
 }
 
 /* mod: removed <ul> and <li> elements */
@@ -133,7 +132,7 @@ p, blockquote, ol, dl, table, pre {
 hr {
 	/*background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;*/
 	/*border: 0 none;*/
-	/*color: #cccccc;*/
+	/*color: #ccc;*/
 	/*height: 4px;*/
 	/*padding: 0;*/
 	margin: 50px 0; /* mod: added margin */
@@ -223,9 +222,9 @@ dl dd > :last-child {
 }
 
 blockquote {
-	border-left: 4px solid #dddddd;
+	border-left: 4px solid #ddd;
 	padding: 0 15px;
-	color: #777777;
+	color: #777;
 }
 
 blockquote > :first-child {
@@ -240,7 +239,7 @@ table {
 	padding: 0;
 }
 table tr {
-	border-top: 1px solid #cccccc;
+	border-top: 1px solid #ccc;
 	background-color: white;
 	margin: 0;
 	padding: 0;
@@ -252,14 +251,14 @@ table tr:nth-child(2n) {
 
 table tr th {
 	font-weight: bold;
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 	text-align: left;
 	margin: 0;
 	padding: 6px 13px;
 }
 
 table tr td {
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 	text-align: left;
 	margin: 0;
 	padding: 6px 13px;
@@ -285,7 +284,7 @@ span.frame {
 }
 
 span.frame > span {
-	border: 1px solid #dddddd;
+	border: 1px solid #ddd;
 	display: block;
 	float: left;
 	overflow: hidden;
@@ -301,7 +300,7 @@ span.frame span img {
 
 span.frame span span {
 	clear: both;
-	color: #333333;
+	color: #333;
 	display: block;
 	padding: 5px 0 0;
 }
@@ -386,9 +385,9 @@ pre code {
 
 .highlight pre {
 	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 	font-size: 13px;
-	font-size: 15px; /* mod: adjusted font-size */
+	font-size: 16px; /* mod: adjusted font-size */
 	line-height: 19px;
 	overflow: auto;
 	padding: 6px 10px;
@@ -397,9 +396,9 @@ pre code {
 
 pre {
 	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
+	border: 1px solid #ccc;
 	font-size: 13px;
-	font-size: 15px; /* mod: adjusted font-size */
+	font-size: 16px; /* mod: adjusted font-size */
 	line-height: 19px;
 	overflow: auto;
 	padding: 6px 10px;
