@@ -1,31 +1,37 @@
 "use strict";
 
+// required packages
 const gulp = require("gulp"),
 		changed = require("gulp-changed"), // build tool - only process modified files
 		doctoc = require("gulp-doctoc"), // markup - automatic TOC generation
 		marked = require("gulp-marked"), // markup - MD to HTML converter
+		prism = require("prismjs"), // markup - process markup for code syntax highlighting
 		inject = require("gulp-inject"), // markup - injection of code partials
 		dom = require("gulp-dom"), // build tool - run DOM operations on inbound HTML
 		prettify = require("gulp-prettify"); // markup - proper indentation and line breaks for HTML
+
+// translate marked languages to prism
+const prismLangs = {
+	html: "markup",
+	markdown: "markup",
+	scss: "css",
+	js: "javascript"
+};
 
 // default tasks to run on "gulp" command
 gulp.task("default",
 	[
 		"documentastic",
-		"readmeTOC"
-	],
-	() => {
-		// files to watch and tasks to run
-		gulp.watch("md-docs/*.md", ["documentastic"]);
-		gulp.watch("readme.md", ["readmeTOC"]);
-	}
+		"readmeTOC",
+		"watch"
+	]
 );
 
 // documentastic task
 // 1) source: MD files from md-docs/ pipe into...
 // 2) changed: monitors HTML files from html-docs/ and only the modified files are piped into...
 // 3) doctoc: generates TOC, then pipes into...
-// 4) marked: converts MD to HTML, then pipes into...
+// 4) marked: converts MD to HTML and uses prism for code syntax highlighting, then pipes into...
 // 5) inject (1 of 2): injects code into top of HTML document, then pipes into...
 // 6) inject (2 of 2): injects code into bottom of HTML document, then pipes into...
 // 7) dom: manipulate HTML elements (see below for full details), then pipes into...
@@ -40,7 +46,30 @@ gulp.task("documentastic", () => {
 			extension: ".html"
 		}))
 		.pipe(doctoc())
-		.pipe(marked())
+		.pipe(marked({
+			langPrefix: "language-",
+			renderer: {
+				// modify output of code method to match what prism expects
+				code: function(code, lang, escaped) {
+					code = this.options.highlight(code, lang);
+
+					if(!lang) {
+						return `<pre><code>${code}</code></pre>`;
+					}
+
+					let langClass = this.options.langPrefix + lang;
+
+					return `<pre class="${langClass}"><code class="${langClass}">${code}</code></pre>`;
+				}
+			},
+			highlight: (code, lang) => {
+				if(!prism.languages.hasOwnProperty(lang)) {
+					lang = prismLangs[lang] || "markup"; // default to markup
+				}
+
+				return prism.highlight(code, prism.languages[lang]);
+			}
+		}))
 		.pipe(inject(gulp.src(["partials/p1-top.html"]), {
 			starttag: "<!-- inject:p1-top:{{ext}} -->", // tag specifying point of injection
 			removeTags: true, // removes injection tags from HTML file after injection is complete
@@ -139,4 +168,11 @@ gulp.task("readmeTOC", () => {
 	return gulp.src("readme.md")
 		.pipe(doctoc())
 		.pipe(gulp.dest(""));
+});
+
+// watch task
+// files to watch and tasks to run
+gulp.task("watch", () => {
+	gulp.watch("md-docs/*.md", ["documentastic"]);
+	gulp.watch("readme.md", ["readmeTOC"]);
 });
