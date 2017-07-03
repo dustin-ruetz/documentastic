@@ -35,7 +35,7 @@ Paragraphs must be separated by one blank line, otherwise they will be rendered 
 
 ```markdown
 This is the first paragraph.
-	
+    
 This is the second paragraph.
 ```
 
@@ -49,7 +49,7 @@ Alternatively, text wrapped with two underscores on either side will also be bol
 
 ```markdown
 This will render **bold** text.
-	
+    
 This will also render __bold__ text.
 ```
 
@@ -61,7 +61,7 @@ Alternatively, text wrapped with asterisks on either side will also be italicize
 
 ```markdown
 This will render _italicized_ text.
-	
+    
 This will also render *italicized* text.
 ```
 
@@ -167,37 +167,37 @@ Will produce this output:
 
 #### Nested lists
 
-Add sub-items to list items using tab indentation.
+Add sub-items to list items using indentation.
 
 ```markdown
 1. Go to the store.
-	* Buy milk.
-	* Buy bread.
+    * Buy milk.
+    * Buy bread.
 1. Go home.
 ```
 
 #### Advanced nesting
 
-Additional elements (paragraphs, images, links, etc.) can be included in list items by using line breaks and tab indentation.
+Additional elements (paragraphs, images, links, etc.) can be included in list items by using line breaks and indentation.
 
 ```markdown
 1. Create a new HTML file.
-	* Include the following content:
+    * Include the following content:
 
-		This is a paragraph.
+        This is a paragraph.
 
-		![Alternate text for the image](path/to/image.png)
+        ![Alternate text for the image](path/to/image.png)
 
-		[Link to full article](http://example.com/article)
+        [Link to full article](http://example.com/article)
 
-	* Save and close the file.
+    * Save and close the file.
 
 1. Create a new CSS file.
 ```
 
 ### Horizontal rule
 
-Use three hyphens to create a horizontal rule. Ensure that there are blank line breaks above and beneath, otherwise Markdown will render a heading.
+Use three hyphens to create a horizontal rule. Ensure that there are blank line breaks above and beneath, otherwise it will be rendered as a heading.
 
 ```markdown
 ## First section
@@ -234,19 +234,19 @@ There are three ways to indicate code, and a `diff` feature for highlighting cod
 (1) Indent the code block.
 
 ```markdown
-	var x = 1;
-	var y = x + 1;
+    var x = 1;
+    var y = x + 1;
 ```
 
-(2) Begin the code block with three backticks and the name of the language, write the lines of code, and then end with three more backticks.
+(2) Begin the code block with three backticks and the name of the language, write the code, and then end with three more backticks.
 
 **Note**: Specifying the language name, while not strictly required, is helpful for code syntax highlighting.
 
 ```markdown
 ```js
 var person = {
-	name: "Jimi Hendrix",
-	age: 27
+    name: "Jimi Hendrix",
+    age: 27
 };
 ``` 
 ```
@@ -279,11 +279,19 @@ Both tables and checkboxes are not included in the official Markdown specificati
 * Rows are indicated by each line wrapped in pipe characters.
 * The second line of the table controls the column's text alignment.
 
+For example, this input:
+
 ```markdown
-| Col1 Heading    |  Col2 Heading  |     Col3 Heading |
-|:----------------|:--------------:|-----------------:|
-| Left-aligned    |    Centered    |    Right-aligned |
+| Col1 Heading | Col2 Heading | Col3 Heading |
+|:-------------|:------------:|-------------:|
+| Left-aligned content | Centered content | Right-aligned content |
 ```
+
+Will produce this output:
+
+| Col1 Heading | Col2 Heading | Col3 Heading |
+|:-------------|:------------:|-------------:|
+| Left-aligned content | Centered content | Right-aligned content |
 
 #### Checkboxes
 

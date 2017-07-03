@@ -1,22 +1,21 @@
 {
-	"name": "documentastic",
-	"version": "1.1.0",
-	"description": "Markdown-to-HTML documentation generator featuring a plethora of added bells and whistles.",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"author": "Dustin Ruetz",
-	"license": "MIT",
-	"devDependencies": {
-		"gulp": "^3.9.1",
-		"gulp-changed": "^2.0.0",
-		"gulp-doctoc": "^0.1.4",
-		"gulp-dom": "^0.9.0",
-		"gulp-highlight": "^2.1.0",
-		"gulp-inject": "^4.1.0",
-		"gulp-marked": "^1.0.0",
-		"gulp-prettify": "^0.5.0",
-		"prismjs": "^1.6.0"
-	}
+    "name": "documentastic",
+    "version": "1.2.0",
+    "description": "Markdown-to-HTML documentation generator featuring a plethora of added bells and whistles.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Dustin Ruetz",
+    "license": "MIT",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-changed": "^3.1.0",
+        "gulp-doctoc": "^0.1.4",
+        "gulp-dom": "^0.9.0",
+        "gulp-htmlmin": "^3.0.0",
+        "gulp-inject": "^4.1.0",
+        "gulp-marked": "^1.0.0",
+        "prismjs": "^1.6.0"
+    }
 }

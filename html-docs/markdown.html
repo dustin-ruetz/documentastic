@@ -1,120 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head> <title>Markdown</title> <link rel="icon" href="icons/favicon.png"> <link rel="stylesheet" href="styles/main.css"> <link rel="stylesheet" href="styles/prism-okaidia.css"> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> </head> <body> <h1 id="markdown">Markdown</h1> <p>Notes on using Markdown.</p> <ul> <li><a href="#resources">Resources</a></li> <li><a href="#syntax">Syntax</a><ul> <li><a href="#headings">Headings</a></li> <li><a href="#paragraphs">Paragraphs</a></li> <li><a href="#styling-text">Styling text</a><ul> <li><a href="#bold">Bold</a></li> <li><a href="#italic">Italic</a></li> <li><a href="#strikethrough">Strikethrough</a></li> </ul> </li> <li><a href="#links">Links</a></li> <li><a href="#images">Images</a></li> <li><a href="#lists">Lists</a><ul> <li><a href="#unordered-lists">Unordered lists</a></li> <li><a href="#ordered-lists">Ordered lists</a></li> <li><a href="#nested-lists">Nested lists</a></li> <li><a href="#advanced-nesting">Advanced nesting</a></li> </ul> </li> <li><a href="#horizontal-rule">Horizontal rule</a></li> <li><a href="#blockquotes">Blockquotes</a></li> <li><a href="#code-blocks-and-syntax-highlighting">Code blocks and syntax highlighting</a></li> <li><a href="#non-standard-features">Non-standard features</a><ul> <li><a href="#tables">Tables</a></li> <li><a href="#checkboxes">Checkboxes</a></li> </ul> </li> </ul> </li> </ul> <h2 id="resources">Resources</h2> <ul> <li><a href="https://masteringmarkdown.com" target="_blank" rel="noopener noreferrer">Mastering Markdown</a> video series by Wes Bos.</li> </ul> <h2 id="syntax">Syntax</h2> <ul> <li>Markdown uses its own syntax that allows users to write simplified HTML.</li> <li>Markdown files, when parsed or opened in a Markdown viewer, are compiled into valid HTML.</li> </ul> <h3 id="headings">Headings</h3> <p>Use one hashtag for an <code>&lt;h1&gt;</code>, followed by the heading text.</p> <pre class="language-markdown"><code class="language-markdown"># This will render as an <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span> heading.</code></pre><p>Use two hashtags for an <code>&lt;h2&gt;</code>, followed by the heading text, etc.</p> <h3 id="paragraphs">Paragraphs</h3> <p>Simply type the paragraph text - no special characters needed.</p> <p>Paragraphs must be separated by one blank line, otherwise they will be rendered on the same line.</p> <pre class="language-markdown"><code class="language-markdown">This is the first paragraph.
 
-	<head>
-		<title>Markdown</title>
-		<link rel="icon" href="icons/favicon.png">
-		<link rel="stylesheet" href="styles/main.css">
-		<link rel="stylesheet" href="styles/prism-okaidia.css">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
+This is the second paragraph.</code></pre><h3 id="styling-text">Styling text</h3> <h4 id="bold">Bold</h4> <p>Text wrapped with two asterisks on either side will be bolded.</p> <p>Alternatively, text wrapped with two underscores on either side will also be bolded.</p> <pre class="language-markdown"><code class="language-markdown">This will render **bold** text.
 
-	<body>
-		<h1 id="markdown">Markdown</h1>
-		<p>Notes on using Markdown.</p>
-		<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-		<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-		<ul>
-			<li><a href="#resources">Resources</a></li>
-			<li><a href="#syntax">Syntax</a>
-				<ul>
-					<li><a href="#headings">Headings</a></li>
-					<li><a href="#paragraphs">Paragraphs</a></li>
-					<li><a href="#styling-text">Styling text</a>
-						<ul>
-							<li><a href="#bold">Bold</a></li>
-							<li><a href="#italic">Italic</a></li>
-							<li><a href="#strikethrough">Strikethrough</a></li>
-						</ul>
-					</li>
-					<li><a href="#links">Links</a></li>
-					<li><a href="#images">Images</a></li>
-					<li><a href="#lists">Lists</a>
-						<ul>
-							<li><a href="#unordered-lists">Unordered lists</a></li>
-							<li><a href="#ordered-lists">Ordered lists</a></li>
-							<li><a href="#nested-lists">Nested lists</a></li>
-							<li><a href="#advanced-nesting">Advanced nesting</a></li>
-						</ul>
-					</li>
-					<li><a href="#horizontal-rule">Horizontal rule</a></li>
-					<li><a href="#blockquotes">Blockquotes</a></li>
-					<li><a href="#code-blocks-and-syntax-highlighting">Code blocks and syntax highlighting</a></li>
-					<li><a href="#non-standard-features">Non-standard features</a>
-						<ul>
-							<li><a href="#tables">Tables</a></li>
-							<li><a href="#checkboxes">Checkboxes</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-		<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-		<h2 id="resources">Resources</h2>
-		<ul>
-			<li><a href="https://masteringmarkdown.com" target="_blank" rel="noopener noreferrer">Mastering Markdown</a> video series by Wes Bos.</li>
-		</ul>
-		<h2 id="syntax">Syntax</h2>
-		<ul>
-			<li>Markdown uses its own syntax that allows users to write simplified HTML.</li>
-			<li>Markdown files, when parsed or opened in a Markdown viewer, are compiled into valid HTML.</li>
-		</ul>
-		<h3 id="headings">Headings</h3>
-		<p>Use one hashtag for an <code>&lt;h1&gt;</code>, followed by the heading text.</p>
-		<pre class="language-markdown"><code class="language-markdown"># This will render as an <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span> heading.</code></pre>
-		<p>Use two hashtags for an <code>&lt;h2&gt;</code>, followed by the heading text, etc.</p>
-		<h3 id="paragraphs">Paragraphs</h3>
-		<p>Simply type the paragraph text - no special characters needed.</p>
-		<p>Paragraphs must be separated by one blank line, otherwise they will be rendered on the same line.</p>
-		<pre class="language-markdown"><code class="language-markdown">This is the first paragraph.
+This will also render __bold__ text.</code></pre><h4 id="italic">Italic</h4> <p>Text wrapped with underscores on either side will be italicized.</p> <p>Alternatively, text wrapped with asterisks on either side will also be italicized.</p> <pre class="language-markdown"><code class="language-markdown">This will render _italicized_ text.
 
-This is the second paragraph.</code></pre>
-		<h3 id="styling-text">Styling text</h3>
-		<h4 id="bold">Bold</h4>
-		<p>Text wrapped with two asterisks on either side will be bolded.</p>
-		<p>Alternatively, text wrapped with two underscores on either side will also be bolded.</p>
-		<pre class="language-markdown"><code class="language-markdown">This will render **bold** text.
-
-This will also render __bold__ text.</code></pre>
-		<h4 id="italic">Italic</h4>
-		<p>Text wrapped with underscores on either side will be italicized.</p>
-		<p>Alternatively, text wrapped with asterisks on either side will also be italicized.</p>
-		<pre class="language-markdown"><code class="language-markdown">This will render _italicized_ text.
-
-This will also render *italicized* text.</code></pre>
-		<h4 id="strikethrough">Strikethrough</h4>
-		<p>Text wrapped with two tildes on either side will render as strikethrough text.</p>
-		<pre class="language-markdown"><code class="language-markdown">This will render as ~~strikethrough~~ text.</code></pre>
-		<h3 id="links">Links</h3>
-		<p>There are four ways to use links in Markdown.</p>
-		<p>(1) Wrap the URL with angle brackets.</p>
-		<pre class="language-markdown"><code class="language-markdown">&lt;https://github.com&gt;</code></pre>
-		<p>(2) Wrap the link text in square brackets and the URL in parentheses.</p>
-		<pre class="language-markdown"><code class="language-markdown">Go to [GitHub.com](https://github.com) to learn more.</code></pre>
-		<p>(3) To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.</p>
-		<pre class="language-markdown"><code class="language-markdown">Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.</code></pre>
-		<p>(4) To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its location at the bottom of the document. This method also has the advantage of being able to reference the same link in multiple places.</p>
-		<pre class="language-markdown"><code class="language-markdown">Visit the world's [first website][first-website], created by Tim Berners-Lee.
+This will also render *italicized* text.</code></pre><h4 id="strikethrough">Strikethrough</h4> <p>Text wrapped with two tildes on either side will render as strikethrough text.</p> <pre class="language-markdown"><code class="language-markdown">This will render as ~~strikethrough~~ text.</code></pre><h3 id="links">Links</h3> <p>There are four ways to use links in Markdown.</p> <p>(1) Wrap the URL with angle brackets.</p> <pre class="language-markdown"><code class="language-markdown">&lt;https://github.com&gt;</code></pre><p>(2) Wrap the link text in square brackets and the URL in parentheses.</p> <pre class="language-markdown"><code class="language-markdown">Go to [GitHub.com](https://github.com) to learn more.</code></pre><p>(3) To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.</p> <pre class="language-markdown"><code class="language-markdown">Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.</code></pre><p>(4) To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its location at the bottom of the document. This method also has the advantage of being able to reference the same link in multiple places.</p> <pre class="language-markdown"><code class="language-markdown">Visit the world's [first website][first-website], created by Tim Berners-Lee.
 
 ... (rest of document) ...
 
-[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html</code></pre>
-		<h3 id="images">Images</h3>
-		<p>Images are indicated with an exclamation mark, alternate text is placed in square brackets, the path/URL is placed in parentheses, and finally a title/tooltip can be included in quotes.</p>
-		<pre class="language-markdown"><code class="language-markdown">![Alternate text for the image](path/to/image.png "Title text for the image")</code></pre>
-		<p>Alternatively, images can be used in a similar way to the "link/reference" method.</p>
-		<pre class="language-markdown"><code class="language-markdown">## Gallery
+[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html</code></pre><h3 id="images">Images</h3> <p>Images are indicated with an exclamation mark, alternate text is placed in square brackets, the path/URL is placed in parentheses, and finally a title/tooltip can be included in quotes.</p> <pre class="language-markdown"><code class="language-markdown">![Alternate text for the image](path/to/image.png "Title text for the image")</code></pre><p>Alternatively, images can be used in a similar way to the "link/reference" method.</p> <pre class="language-markdown"><code class="language-markdown">## Gallery
 
 ![Alternate text for the image][img-1]
 
 ... (rest of document) ...
 
-[img-1]: https://github.com/images/logo.png</code></pre>
-		<h3 id="lists">Lists</h3>
-		<h4 id="unordered-lists">Unordered lists</h4>
-		<p>Unordered lists are produced by using the asterisk, hyphen, or plus sign characters. All will be rendered as bullet points.</p>
-		<pre class="language-markdown"><code class="language-markdown">Asterisk bullet points
+[img-1]: https://github.com/images/logo.png</code></pre><h3 id="lists">Lists</h3> <h4 id="unordered-lists">Unordered lists</h4> <p>Unordered lists are produced by using the asterisk, hyphen, or plus sign characters. All will be rendered as bullet points.</p> <pre class="language-markdown"><code class="language-markdown">Asterisk bullet points
 * Item 1
 * Item 2
 * Item 3
@@ -127,28 +27,12 @@ Hyphen bullet points
 Plus Sign bullet points
 + Item 1
 + Item 2
-+ Item 3</code></pre>
-		<h4 id="ordered-lists">Ordered lists</h4>
-		<p>Each ordered list item should be preceded by <code>1.</code> so that they will be numbered correctly when compiled.</p>
-		<p>For example, this input:</p>
-		<pre class="language-markdown"><code class="language-markdown">1. Number One
++ Item 3</code></pre><h4 id="ordered-lists">Ordered lists</h4> <p>Each ordered list item should be preceded by <code>1.</code> so that they will be numbered correctly when compiled.</p> <p>For example, this input:</p> <pre class="language-markdown"><code class="language-markdown">1. Number One
 1. Number Two
-1. Number Three</code></pre>
-		<p>Will produce this output:</p>
-		<ol>
-			<li>Number One</li>
-			<li>Number Two</li>
-			<li>Number Three</li>
-		</ol>
-		<h4 id="nested-lists">Nested lists</h4>
-		<p>Add sub-items to list items using tab indentation.</p>
-		<pre class="language-markdown"><code class="language-markdown">1. Go to the store.
+1. Number Three</code></pre><p>Will produce this output:</p> <ol> <li>Number One</li> <li>Number Two</li> <li>Number Three</li> </ol> <h4 id="nested-lists">Nested lists</h4> <p>Add sub-items to list items using indentation.</p> <pre class="language-markdown"><code class="language-markdown">1. Go to the store.
     * Buy milk.
     * Buy bread.
-1. Go home.</code></pre>
-		<h4 id="advanced-nesting">Advanced nesting</h4>
-		<p>Additional elements (paragraphs, images, links, etc.) can be included in list items by using line breaks and tab indentation.</p>
-		<pre class="language-markdown"><code class="language-markdown">1. Create a new HTML file.
+1. Go home.</code></pre><h4 id="advanced-nesting">Advanced nesting</h4> <p>Additional elements (paragraphs, images, links, etc.) can be included in list items by using line breaks and indentation.</p> <pre class="language-markdown"><code class="language-markdown">1. Create a new HTML file.
     * Include the following content:
 
         This is a paragraph.
@@ -159,10 +43,7 @@ Plus Sign bullet points
 
     * Save and close the file.
 
-1. Create a new CSS file.</code></pre>
-		<h3 id="horizontal-rule">Horizontal rule</h3>
-		<p>Use three hyphens to create a horizontal rule. Ensure that there are blank line breaks above and beneath, otherwise Markdown will render a heading.</p>
-		<pre class="language-markdown"><code class="language-markdown">## First section
+1. Create a new CSS file.</code></pre><h3 id="horizontal-rule">Horizontal rule</h3> <p>Use three hyphens to create a horizontal rule. Ensure that there are blank line breaks above and beneath, otherwise it will be rendered as a heading.</p> <pre class="language-markdown"><code class="language-markdown">## First section
 
 ---
 
@@ -170,60 +51,20 @@ Plus Sign bullet points
 
 ---
 
-## Third section</code></pre>
-		<h3 id="blockquotes">Blockquotes</h3>
-		<p>Create a single-line blockquote using the right-pointing angle bracket (&gt;).</p>
-		<pre class="language-markdown"><code class="language-markdown">&gt; A single-line blockquote. ~~ William Shakespeare</code></pre>
-		<p>Create a multi-line blockquote by starting each line with angle brackets.</p>
-		<pre class="language-markdown"><code class="language-markdown">&gt; A multi-line blockquote.
+## Third section</code></pre><h3 id="blockquotes">Blockquotes</h3> <p>Create a single-line blockquote using the right-pointing angle bracket (&gt;).</p> <pre class="language-markdown"><code class="language-markdown">&gt; A single-line blockquote. ~~ William Shakespeare</code></pre><p>Create a multi-line blockquote by starting each line with angle brackets.</p> <pre class="language-markdown"><code class="language-markdown">&gt; A multi-line blockquote.
 &gt; 
-&gt; ~~ Socrates</code></pre>
-		<h3 id="code-blocks-and-syntax-highlighting">Code blocks and syntax highlighting</h3>
-		<p>There are three ways to indicate code, and a <code>diff</code> feature for highlighting code changes.</p>
-		<p>(1) Indent the code block.</p>
-		<pre class="language-markdown"><code class="language-markdown">    var x = 1;
-    var y = x + 1;</code></pre>
-		<p>(2) Begin the code block with three backticks and the name of the language, write the lines of code, and then end with three more backticks.</p>
-		<p><strong>Note</strong>: Specifying the language name, while not strictly required, is helpful for code syntax highlighting.</p>
-		<pre class="language-markdown"><code class="language-markdown">```js
+&gt; ~~ Socrates</code></pre><h3 id="code-blocks-and-syntax-highlighting">Code blocks and syntax highlighting</h3> <p>There are three ways to indicate code, and a <code>diff</code> feature for highlighting code changes.</p> <p>(1) Indent the code block.</p> <pre class="language-markdown"><code class="language-markdown">    var x = 1;
+    var y = x + 1;</code></pre><p>(2) Begin the code block with three backticks and the name of the language, write the code, and then end with three more backticks.</p> <p><strong>Note</strong>: Specifying the language name, while not strictly required, is helpful for code syntax highlighting.</p> <pre class="language-markdown"><code class="language-markdown">```js
 var person = {
     name: "Jimi Hendrix",
     age: 27
 };
-```</code></pre>
-		<p>(3) If writing inline code, wrap it in backticks.</p>
-		<pre class="language-markdown"><code class="language-markdown">This `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>` will be formatted as code.</code></pre>
-		<p>(4) The <code>diff</code> feature is used to visually indicate changes.</p>
-		<ul>
-			<li>Lines beginning with a plus sign (+) will be rendered as green additions.</li>
-			<li>Lines beginning with a minus sign (-) will be rendered as red deletions.</li>
-		</ul>
-		<pre class="language-markdown"><code class="language-markdown">```diff
+```</code></pre><p>(3) If writing inline code, wrap it in backticks.</p> <pre class="language-markdown"><code class="language-markdown">This `<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>` will be formatted as code.</code></pre><p>(4) The <code>diff</code> feature is used to visually indicate changes.</p> <ul> <li>Lines beginning with a plus sign (+) will be rendered as green additions.</li> <li>Lines beginning with a minus sign (-) will be rendered as red deletions.</li> </ul> <pre class="language-markdown"><code class="language-markdown">```diff
 var x = 100;
 + var y = 200;
 - var y = 300;
-```</code></pre>
-		<h3 id="non-standard-features">Non-standard features</h3>
-		<p>Both tables and checkboxes are not included in the official Markdown specification, however many parsers/readers do support them.</p>
-		<h4 id="tables">Tables</h4>
-		<ul>
-			<li>Columns are indicated by using the pipe character (|).</li>
-			<li>Rows are indicated by each line wrapped in pipe characters.</li>
-			<li>The second line of the table controls the column's text alignment.</li>
-		</ul>
-		<pre class="language-markdown"><code class="language-markdown">| Col1 Heading    |  Col2 Heading  |     Col3 Heading |
-|:----------------|:--------------:|-----------------:|
-| Left-aligned    |    Centered    |    Right-aligned |</code></pre>
-		<h4 id="checkboxes">Checkboxes</h4>
-		<p>Checkboxes are added by using a list item along with a set of square brackets containing a space.</p>
-		<p>To check off a list item, place an "x" inside of the square brackets.</p>
-		<pre class="language-markdown"><code class="language-markdown">* [ ] Task 1
+```</code></pre><h3 id="non-standard-features">Non-standard features</h3> <p>Both tables and checkboxes are not included in the official Markdown specification, however many parsers/readers do support them.</p> <h4 id="tables">Tables</h4> <ul> <li>Columns are indicated by using the pipe character (|).</li> <li>Rows are indicated by each line wrapped in pipe characters.</li> <li>The second line of the table controls the column's text alignment.</li> </ul> <p>For example, this input:</p> <pre class="language-markdown"><code class="language-markdown">| Col1 Heading | Col2 Heading | Col3 Heading |
+|:-------------|:------------:|-------------:|
+| Left-aligned content | Centered content | Right-aligned content |</code></pre><p>Will produce this output:</p> <table> <thead> <tr> <th style="text-align:left">Col1 Heading</th> <th style="text-align:center">Col2 Heading</th> <th style="text-align:right">Col3 Heading</th> </tr> </thead> <tbody> <tr> <td style="text-align:left">Left-aligned content</td> <td style="text-align:center">Centered content</td> <td style="text-align:right">Right-aligned content</td> </tr> </tbody> </table> <h4 id="checkboxes">Checkboxes</h4> <p>Checkboxes are added by using a list item along with a set of square brackets containing a space.</p> <p>To check off a list item, place an "x" inside of the square brackets.</p> <pre class="language-markdown"><code class="language-markdown">* [ ] Task 1
 * [ ] Task 2
-* [x] Task 3</code></pre>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
-		<script src="scripts/main.js"></script>
-
-	</body>
-
-</html>
+* [x] Task 3</code></pre> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script> <script src="scripts/main.js"></script> </body></html>
