@@ -1,13 +1,15 @@
 "use strict";
 
-// gulp module and descriptions of required packages
-// changed : only process modified files
-// doctoc  : automatic TOC generation
-// marked  : Markdown to HTML converter
-// prism   : process markup for code syntax highlighting
-// inject  : injection of code partials
-// dom     : run DOM operations on inbound HTML
-// htmlmin : minify HTML code
+/*
+    gulp module and descriptions of required packages
+    - changed : only process modified files
+    - doctoc  : automatic TOC generation
+    - marked  : Markdown to HTML converter
+    - prism   : process markup for code syntax highlighting
+    - inject  : injection of code partials
+    - dom     : run DOM operations on inbound HTML
+    - htmlmin : minify HTML code
+*/
 const gulp    = require("gulp"),
       changed = require("gulp-changed"),
       doctoc  = require("gulp-doctoc"),
@@ -17,7 +19,7 @@ const gulp    = require("gulp"),
       dom     = require("gulp-dom"),
       htmlmin = require("gulp-htmlmin");
 
-// documentastic application object
+// documentastic application (docApp) object
 const docApp = {
     // config object to translate marked languages to prism
     prismLangs: {
@@ -26,7 +28,6 @@ const docApp = {
         scss     : "css",
         js       : "javascript"
     },
-
     // function to inject code partials
     injectCode: (partial) => {
         return inject(gulp.src([`partials/${partial}.html`]), {
@@ -40,13 +41,12 @@ const docApp = {
 };
 
 // default tasks to run on "gulp" command
-gulp.task("default",
-    [
-        "documentastic",
-        "readmeTOC",
-        "watch"
-    ]
-);
+const tasks = [
+    "documentastic",
+    "readmeTOC",
+    "watch"
+];
+gulp.task("default", tasks);
 
 // documentastic task
 // 1) source      : MD files from md-docs/ pipe into...
@@ -71,10 +71,10 @@ gulp.task("documentastic", () => {
             langPrefix: "language-",
             renderer: {
                 // modify output of code method to match what prism expects
-                code: function(code, lang, escaped) {
+                code: function (code, lang, escaped) {
                     code = this.options.highlight(code, lang);
 
-                    if(!lang) {
+                    if (!lang) {
                         return `<pre><code>${code}</code></pre>`;
                     }
 
@@ -84,7 +84,7 @@ gulp.task("documentastic", () => {
                 }
             },
             highlight: (code, lang) => {
-                if(!prism.languages.hasOwnProperty(lang)) {
+                if (!prism.languages.hasOwnProperty(lang)) {
                     lang = docApp.prismLangs[lang] || "markup"; // default to markup
                 }
 
@@ -93,7 +93,7 @@ gulp.task("documentastic", () => {
         }))
         .pipe(docApp.injectCode("p1-top"))
         .pipe(docApp.injectCode("p2-bottom"))
-        .pipe(dom(function() {
+        .pipe(dom(function () {
             // note: in gulp-dom, this = document
 
             const doc = {
@@ -148,7 +148,7 @@ gulp.task("documentastic", () => {
             // filter out <li> elements containing "[x]"
             doc.listItemsChecked = doc.liArr.filter((listItem) => {
                 // if required, change all uppercase "X" to lowercase "x"
-                if(listItem.textContent.includes("[X]")) {
+                if (listItem.textContent.includes("[X]")) {
                     let lowercase = listItem.textContent.replace("[X]", "[x]");
                     listItem.textContent = lowercase;
                 };

@@ -1,14 +1,14 @@
 var docApp = {};
 
-docApp.init = function() {
+docApp.init = function () {
     // find all internal links (href starts with #)
-    $("a[href^='#']").each(function() {
+    $("a[href^='#']").each(function () {
         // apply smoothScroll to each one
         $(this).smoothScroll();
     });
 };
 
 // jQuery document ready
-$(function() {
+$(function () {
     docApp.init();
 });
