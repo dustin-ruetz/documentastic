@@ -35,7 +35,7 @@ Paragraphs must be separated by one blank line, otherwise they will be rendered 
 
 ```markdown
 This is the first paragraph.
-    
+
 This is the second paragraph.
 ```
 
@@ -49,7 +49,7 @@ Alternatively, text wrapped with two underscores on either side will also be bol
 
 ```markdown
 This will render **bold** text.
-    
+
 This will also render __bold__ text.
 ```
 
@@ -61,7 +61,7 @@ Alternatively, text wrapped with asterisks on either side will also be italicize
 
 ```markdown
 This will render _italicized_ text.
-    
+
 This will also render *italicized* text.
 ```
 
@@ -78,6 +78,7 @@ This will render as ~~strikethrough~~ text.
 There are four ways to use links in Markdown.
 
 (1) Wrap the URL with angle brackets.
+
 ```markdown
 <https://github.com>
 ```
@@ -223,7 +224,7 @@ Create a multi-line blockquote by starting each line with angle brackets.
 
 ```markdown
 > A multi-line blockquote.
-> 
+>
 > ~~ Socrates
 ```
 
@@ -248,7 +249,7 @@ var person = {
     name: "Jimi Hendrix",
     age: 27
 };
-``` 
+```
 ```
 
 (3) If writing inline code, wrap it in backticks.
@@ -258,6 +259,7 @@ This `<p>` will be formatted as code.
 ```
 
 (4) The `diff` feature is used to visually indicate changes.
+
 * Lines beginning with a plus sign (+) will be rendered as green additions.
 * Lines beginning with a minus sign (-) will be rendered as red deletions.
 
@@ -266,7 +268,7 @@ This `<p>` will be formatted as code.
 var x = 100;
 + var y = 200;
 - var y = 300;
-``` 
+```
 ```
 
 ### Non-standard features
