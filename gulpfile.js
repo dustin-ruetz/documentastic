@@ -26,7 +26,8 @@ const docApp = {
         html     : "markup",
         markdown : "markup",
         scss     : "css",
-        js       : "javascript"
+        js       : "javascript",
+        json     : "javascript"
     },
     // function to inject code partials
     injectCode: (partial) => {
@@ -59,7 +60,8 @@ gulp.task("default", tasks);
 // 8) htmlmin     : minifies HTML document, then pipes into...
 // 9) destination : html-docs/ which contains compiled HTML files
 gulp.task("documentastic", () => {
-    return gulp.src("md-docs/*.md")
+    return gulp
+        .src("md-docs/*.md")
         // note: after making a change to one of the injected .html partial files,
         // comment-out "changed" pipe (below), then run the default "gulp" task
         // in order to update all of your files at once
@@ -188,7 +190,8 @@ gulp.task("documentastic", () => {
 // 2) doctoc      : generates TOC, then pipes into...
 // 3) destination : same as source (readme.md contents are automatically overwritten/updated)
 gulp.task("readmeTOC", () => {
-    return gulp.src("readme.md")
+    return gulp
+        .src("readme.md")
         .pipe(doctoc())
         .pipe(gulp.dest(""));
 });

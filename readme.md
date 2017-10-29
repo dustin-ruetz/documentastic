@@ -37,7 +37,7 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 ## Usage
 
 1. Make a copy of `md-docs/template.md` and rename it.
-1. Run the `gulp` command to start the tasks.
+1. Run `npm run gulp` to start the tasks.
 1. Open the new file and document until your heart is content.
 
 ## Features
